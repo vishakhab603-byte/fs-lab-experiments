@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Student Registration</h1>
+    <p class="subtitle">Academic & Personal Information</p>
+
+    <form>
+
+        <!-- Personal Details -->
+        <h2>Personal Details</h2>
+
+        <label>Roll Number *</label>
+        <input type="text" required>
+
+        <label>Student Name *</label>
+        <div class="grid">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+
+        <label>Father's Name *</label>
+        <input type="text" required>
+
+        <label>Date of Birth *</label>
+        <div class="grid">
+            <input type="number" placeholder="DD" min="1" max="31" required>
+            <input type="number" placeholder="MM" min="1" max="12" required>
+            <input type="number" placeholder="YYYY" min="1980" max="2025" required>
+        </div>
+
+        <label>Gender *</label>
+        <div class="inline">
+            <input type="radio" name="gender" required> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+
+        <!-- Academic Details -->
+        <h2>Academic Details</h2>
+
+        <label>Department *</label>
+        <div class="inline">
+            <input type="checkbox"> CSE
+            <input type="checkbox"> IT
+            <input type="checkbox"> ECE
+            <input type="checkbox"> Civil
+            <input type="checkbox"> Mech
+        </div>
+
+        <label>Course *</label>
+        <select required>
+            <option value="">-- Select Course --</option>
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>BCA</option>
+            <option>MCA</option>
+        </select>
+
+        <!-- Contact Details -->
+        <h2>Contact Details</h2>
+
+        <label>Mobile Number *</label>
+        <div class="grid">
+            <input type="text" value="+91" readonly class="country">
+            <input type="tel" pattern="[0-9]{10}" placeholder="10-digit number" required>
+        </div>
+
+        <label>Email Address *</label>
+        <input type="email" required>
+
+        <label>Password *</label>
+        <input type="password" minlength="6" required>
+
+        <label>City *</label>
+        <input type="text" required>
+
+        <label>Address *</label>
+        <textarea rows="3" required></textarea>
+
+        <label>Upload Student Photo</label>
+        <input type="file" accept="image/*">
+
+        <button type="submit">Submit Registration</button>
+
+    </form>
+</div>
+
+</body>
+</html>
